@@ -10,7 +10,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" id="home-link">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
@@ -19,9 +19,23 @@
     <main>
         <h2>About Us</h2>
         <p>This is a sample HTML page.</p>
+        <img id="display-image" src="" alt="Displayed Image">
     </main>
     <footer>
         <p>&copy; 2023 My Website</p>
     </footer>
+
+    <script>
+        // JavaScript to handle image change
+        const homeLink = document.getElementById("home-link");
+        const displayImage = document.getElementById("display-image");
+        
+        homeLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Change the image source when Home is clicked
+            displayImage.src = "https://images.hdqwalls.com/wallpapers/ford-mustang-shelby-gt500-10k-n9.jpg";
+        });
+    </script>
 </body>
 </html>
